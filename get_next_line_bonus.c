@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schahir <schahir@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/26 13:13:57 by schahir           #+#    #+#             */
+/*   Updated: 2024/11/26 20:45:24 by schahir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
 static char	*ft_read_file(int fd, char *buffer)
 {
 	char	*temp_buffer;
-	int		bytes_read;
+	ssize_t	bytes_read;
 
 	temp_buffer = ft_calloc(BUFFER_SIZE + 1, 1);
 	if (!temp_buffer)

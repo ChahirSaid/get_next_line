@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schahir <schahir@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/26 13:14:50 by schahir           #+#    #+#             */
+/*   Updated: 2024/11/26 13:14:55 by schahir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -58,8 +70,7 @@ char	*ft_strjoin(char *str1, char *str2)
 
 	if (!str1)
 		str1 = ft_strdup("");
-	result = ft_calloc(ft_strlen(str1) + ft_strlen(str2) + 1,
-			sizeof(char));
+	result = ft_calloc(ft_strlen(str1) + ft_strlen(str2) + 1, sizeof(char));
 	if (!result)
 	{
 		free(str1);
