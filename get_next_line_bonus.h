@@ -6,7 +6,7 @@
 /*   By: schahir <schahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:50:42 by schahir           #+#    #+#             */
-/*   Updated: 2024/11/26 22:14:49 by schahir          ###   ########.fr       */
+/*   Updated: 2024/11/28 16:54:13 by schahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,9 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
-# else
-#  if BUFFER_SIZE < 0
-#   undef BUFFER_SIZE
-#   define BUFFER_SIZE 0
-#  elif BUFFER_SIZE == INT_MAX
-#   undef BUFFER_SIZE
-#   define BUFFER_SIZE (2147483646)
-#  endif
+# elif BUFFER_SIZE < 0
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 0
 # endif
 
 # define MAX_FD 1024

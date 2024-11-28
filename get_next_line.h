@@ -6,7 +6,7 @@
 /*   By: schahir <schahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:15:13 by schahir           #+#    #+#             */
-/*   Updated: 2024/11/26 22:14:57 by schahir          ###   ########.fr       */
+/*   Updated: 2024/11/28 16:54:07 by schahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,9 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
-# else
-#  if BUFFER_SIZE < 0
-#   undef BUFFER_SIZE
-#   define BUFFER_SIZE 0
-#  elif BUFFER_SIZE == INT_MAX
-#   undef BUFFER_SIZE
-#   define BUFFER_SIZE (2147483646)
-#  endif
+# elif BUFFER_SIZE < 0
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 0
 # endif
 
 char	*get_next_line(int fd);

@@ -6,7 +6,7 @@
 /*   By: schahir <schahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:15:03 by schahir           #+#    #+#             */
-/*   Updated: 2024/11/26 20:45:15 by schahir          ###   ########.fr       */
+/*   Updated: 2024/11/28 16:53:57 by schahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*ft_read_file(int fd, char *buffer)
 	char	*temp_buffer;
 	ssize_t	bytes_read;
 
-	temp_buffer = ft_calloc(BUFFER_SIZE + 1, 1);
+	temp_buffer = ft_calloc((unsigned long long)BUFFER_SIZE + 1, 1);
 	if (!temp_buffer)
 		return (NULL);
 	while (!buffer || !ft_haschar(buffer, '\n'))
