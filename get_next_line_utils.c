@@ -12,6 +12,14 @@
 
 #include "get_next_line.h"
 
+/**
+ * ft_calloc - Allocate and zero-initialize memory
+ *
+ * @count: Number of elements to allocate
+ * @size: Size of each element
+ *
+ * Returns: Pointer to allocated memory, or NULL on failure
+ */
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*allocated_memory;
@@ -30,6 +38,13 @@ void	*ft_calloc(size_t count, size_t size)
 	return (allocated_memory);
 }
 
+/**
+ * ft_strlen - Calculate the length of a string
+ *
+ * @str: String to calculate the length of
+ *
+ * Returns: Length of the string
+ */
 size_t	ft_strlen(char *str)
 {
 	size_t	len;
@@ -40,6 +55,13 @@ size_t	ft_strlen(char *str)
 	return (len);
 }
 
+/**
+ * ft_strdup - Duplicate a string
+ *
+ * @source: String to duplicate
+ *
+ * Returns: Pointer to a new string containing a duplicate of the source string
+ */
 static char	*ft_strdup(const char *source)
 {
 	char	*duplicate;
@@ -62,6 +84,16 @@ static char	*ft_strdup(const char *source)
 	return (duplicate);
 }
 
+/**
+ * ft_strjoin - Concatenate two strings
+ *
+ * @str1: First string
+ * @str2: Second string
+ *
+
+	* Returns: Dynamically allocated string containing
+				the concatenation of the two input strings
+ */
 char	*ft_strjoin(char *str1, char *str2)
 {
 	char	*result;
@@ -88,6 +120,14 @@ char	*ft_strjoin(char *str1, char *str2)
 	return (result);
 }
 
+/**
+ * ft_haschar - Check if a character exists in a string
+ *
+ * @str: String to search
+ * @target: Character to search for
+ *
+ * Returns: 1 if the character is found, 0 otherwise
+ */
 int	ft_haschar(char *str, char target)
 {
 	if (!str)

@@ -12,6 +12,14 @@
 
 #include "get_next_line_bonus.h"
 
+/**
+ * ft_read_file - Read from a file descriptor into a buffer
+ *
+ * @fd: File descriptor to read from
+ * @buffer: Existing buffer to append read content
+ *
+ * Returns: Updated buffer containing read content, or NULL on error
+ */
 static char	*ft_read_file(int fd, char *buffer)
 {
 	char	*temp_buffer;
@@ -36,6 +44,15 @@ static char	*ft_read_file(int fd, char *buffer)
 	return (buffer);
 }
 
+/**
+ * ft_extract_line - Extract a single line from the buffer
+ *
+ * @buffer: Buffer containing file content
+ * @line_len: Pointer to store the length of extracted line
+ *
+ * Returns: Dynamically allocated string with the extracted line,
+	or NULL on error
+ */
 static char	*ft_extract_line(char *buffer, int *line_len)
 {
 	char	*line;
@@ -63,6 +80,14 @@ static char	*ft_extract_line(char *buffer, int *line_len)
 	return (line);
 }
 
+/**
+ * ft_update_buffer - Update the buffer with remaining content
+ *
+ * @buffer: Buffer to update
+ * @start_pos: Position to start updating from
+ *
+ * Returns: Updated buffer with remaining content, or NULL if no content remains
+ */
 static char	*ft_update_buffer(char *buffer, int start_pos)
 {
 	char	*new_buffer;
@@ -89,6 +114,14 @@ static char	*ft_update_buffer(char *buffer, int start_pos)
 	return (new_buffer);
 }
 
+/**
+ * get_next_line - Read a line from multiple file descriptors
+ *
+ * @fd: File descriptor to read from
+ *
+ * Returns: Dynamically allocated string containing the line read,
+	or NULL on error or EOF
+ */
 char	*get_next_line(int fd)
 {
 	static char	*buffer[MAX_FD];
